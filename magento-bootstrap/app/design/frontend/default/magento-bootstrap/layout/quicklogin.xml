@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <default>
+		<block type="core/template" name="quicklogin" output="toHtml" template="quicklogin/quicklogin.phtml" />
+    </default>
+</layout>

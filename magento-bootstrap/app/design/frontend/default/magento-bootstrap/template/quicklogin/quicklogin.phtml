@@ -1,0 +1,69 @@
+
+		<div class="lightbox fade" id="wk_quick_login" style="display: none;">
+			<div class='lightbox-content'>
+				<div id="quicklogin">
+  <div class="quickbg" >
+	<?php echo $this->getMessagesBlock()->getGroupedHtml() ?>
+	
+	    <fieldset id="wk_quicklogin-page">
+			<div class="registered-users">
+				<div id="login-form-box">
+			   <form action="<?php echo $this->getUrl($route) ?>customer/account/loginPost/" method="post" id="login-form" class="frm-login">
+				<div class="content">
+				<h3><?php echo $this->__('Registered Customers') ?></h3>
+				<p><?php echo $this->__('If you have an account with us, please log in.') ?></p>
+				<ul class="form-list">
+					<li><label for="email"><?php echo $this->__('Email Address') ?> <span class="required">*</span></label>
+					<input name="login[username]" value="<?php echo $this->htmlEscape($this->getUsername()) ?>" id="email" type="text" class="input-text required-entry" title="<?php echo $this->__('Email Address') ?>" placeholder="<?php echo $this->__('Email Address') ?>" />
+					</li>
+					<li>
+					<label for="pass"><?php echo $this->__('Password') ?> <span class="required">*</span></label>
+					<input name="login[password]" type="password" class="input-text required-entry validate-password" id="pass" title="<?php echo $this->__('Password') ?>" placeholder="<?php echo $this->__('Password') ?>" />
+					</li>
+				</ul>
+				<p class="required"><?php echo $this->__('* Required Fields') ?></p>
+				</div>
+				<div class="buttons-set">
+					<a class="new-user" href="<?php echo $this->getUrl($route) ?>customer/account/create/"><?php echo $this->__('New User') ?></a>
+				  <span id="fgt-pwd"><?php echo $this->__('Forgot Your Password?') ?></span>
+				<button class="btn btn-mini btn-primary" type="submit" name="send" id="send2"><?php echo $this->__('Login') ?></button>
+				
+				</div>
+				</form>
+				</div>
+				<div class="wk_hide" id="fpass">
+						<form class="for-pass" id="forgot-form" method="post" action="<?php echo $this->getUrl($route) ?>customer/account/forgotpasswordpost/">
+						<h4><?php echo $this->__('Please enter your email to get the password') ?></h4>
+						<ul class="form-list">
+							<li>
+								<label class="required" for="email"><em>*</em><?php echo $this->__('Email Address') ?></label>
+								<div class="input-box">
+									<input type="text" title="Email Address" class="input-text required-entry validate-email" id="forgot_email" value="" name="email" placeholder="<?php echo $this->__('Email Address') ?>">
+								</div>
+							</li>
+						  
+						</ul>
+						<div style="border:0px;" class="col-2 registered-users">
+							<div class="buttons-set">
+							<a class="new-user" href="<?php echo $this->getUrl($route) ?>customer/account/create/"><?php echo $this->__('New User') ?></a>
+							<span id="login-btn">Login</span>
+							<button type="submit" id="send3" name="send3" class="btn btn-mini btn-primary"><span><?php echo $this->__('Submit') ?></span></button>
+								 <p style="display:none;" id="loading"></p> 
+							</div>
+						 </div>
+					   
+						</form>
+						</div>
+			</div>
+	    </fieldset>
+	
+	<script type="text/javascript">
+	//<![CDATA[
+	     // var dataForm = new VarienForm('login-form', true);
+	      //var dataForm1 = new VarienForm('regis-form', true);
+	//]]>
+	</script>
+	</div>
+			</div>
+		</div>
+		</div>
